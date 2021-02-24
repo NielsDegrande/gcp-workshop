@@ -1,0 +1,18 @@
+version: '3'
+services:
+  database:
+    image: "postgres"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: gcp-workshop
+    ports:
+      - 5432:5432
+  server:
+    depends_on:
+      - database
+    image: "gcp-workshop"
+    ports:
+      - 8000:8000
+    environment: 
+      CONNECTION_STRING: postgresql://user:password@database:5432/gcp-workshop

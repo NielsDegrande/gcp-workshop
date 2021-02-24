@@ -1,0 +1,8 @@
+numpy==1.20.*
+pandas==1.2.*
+pyarrow==3.0.*
+psycopg2==2.8.*
+uvicorn==0.13.*
+xgboost==1.2
+scikit-learn==0.24.1
+sqlalchemy==1.3.*
